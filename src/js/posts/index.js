@@ -1,5 +1,5 @@
 import angular from 'angular';
-import uirouter from 'angular-ui-router';
+import uirouter from '@uirouter/angularjs';
 
 import PostService from './service';
 import PostController from './controller';
