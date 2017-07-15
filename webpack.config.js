@@ -11,13 +11,15 @@ module.exports = {
         path: path.resolve('dist'),
         publicPath: '/assets/js/',
         filename: '[name].js',
-        chunkFilename: '[name]-[chunkhash].js'
     },
     plugins: [
         // this other bundle is for vendor libraries
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: ({ resource }) => /node_modules/.test(resource),
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            exclude: 'main'
         })
     ],
     devServer: {
