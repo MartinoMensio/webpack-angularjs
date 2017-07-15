@@ -1,3 +1,6 @@
+# dist folder (output of bundling)
+dist/**
+
 # Logs
 logs
 *.log
